@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EA Code Lab — Build. Test. Automate.</title>
+  <meta name="description" content="Practical MQL5 tutorials, Expert Advisor development, debugging guides, and tools for algorithmic traders and developers.">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/main.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="EA Code Lab home"><span class="brand-mark">&lt;/&gt;</span><span>EA <b>Code Lab</b><small>BUILD. TEST. AUTOMATE.</small></span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav class="nav"><a class="active" href="index.html">Home</a><a href="tutorials.html">Tutorials</a><a href="services.html">Services</a><a href="about.html">About</a><a class="nav-cta" href="contact.html">Work with us</a></nav>
+</header>
+<main>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="pulse"></span> MQL5 • EXPERT ADVISORS • ALGORITHMIC TRADING</p>
+      <h1>Turn trading ideas<br>into <span class="gradient-text">working code.</span></h1>
+      <p class="hero-text">Practical MQL5 tutorials, debugging walkthroughs, and development resources to help you build, test, and improve automated trading systems.</p>
+      <div class="hero-actions"><a class="button button-primary" href="tutorials.html">Explore tutorials <span>→</span></a><a class="button button-ghost" href="services.html">Need development help?</a></div>
+      <div class="trust-row"><span>✓ Practical examples</span><span>✓ Clear explanations</span><span>✓ No profit promises</span></div>
+    </div>
+    <div class="code-card" aria-label="MQL5 code sample">
+      <div class="code-top"><div class="window-dots"><i></i><i></i><i></i></div><span>SignalCheck.mq5</span><span class="code-status">MQL5</span></div>
+      <pre><code><span class="code-purple">bool</span> <span class="code-blue">CheckSignal</span>()
+{
+   <span class="code-purple">double</span> fastMA = <span class="code-blue">GetFastMA</span>();
+   <span class="code-purple">double</span> slowMA = <span class="code-blue">GetSlowMA</span>();
+
+   <span class="code-purple">if</span> (fastMA &gt; slowMA)
+   {
+      <span class="code-green">Print</span>(<span class="code-orange">"Bullish condition"</span>);
+      <span class="code-purple">return true</span>;
+   }
+
+   <span class="code-purple">return false</span>;
+}</code></pre>
+      <div class="code-bottom"><span><i class="status-dot"></i> Learn by building</span><span>01 / 03</span></div>
+    </div>
+  </section>
+  <section class="feature-strip"><div class="wrap feature-grid"><div><span class="feature-icon">⌘</span><div><b>MQL5 tutorials</b><small>Learn concepts with practical examples.</small></div></div><div><span class="feature-icon">⌕</span><div><b>Debugging guides</b><small>Understand errors and fix them methodically.</small></div></div><div><span class="feature-icon">↗</span><div><b>EA development</b><small>Build more maintainable trading software.</small></div></div></div></section>
+  <section class="section wrap">
+    <div class="section-heading"><div><p class="eyebrow">START HERE</p><h2>Learn. Build. Improve.</h2></div><a class="text-link" href="tutorials.html">All tutorials <span>→</span></a></div>
+    <div class="article-grid">
+      <article class="article-card"><div class="article-meta"><span class="tag">BEGINNER</span><span>8 min read</span></div><h3><a href="articles/mql5-beginners.html">MQL5 for Beginners: Understand the Building Blocks</a></h3><p>Get familiar with the structure of an Expert Advisor and the role of its main functions.</p><a class="card-link" href="articles/mql5-beginners.html">Read guide <span>→</span></a></article>
+      <article class="article-card"><div class="article-meta"><span class="tag tag-purple">DEBUGGING</span><span>10 min read</span></div><h3><a href="articles/debug-mql5-errors.html">A Methodical Way to Debug MQL5 Errors</a></h3><p>Learn how to read compiler messages, isolate causes, and verify fixes without guesswork.</p><a class="card-link" href="articles/debug-mql5-errors.html">Read guide <span>→</span></a></article>
+      <article class="article-card"><div class="article-meta"><span class="tag tag-orange">TESTING</span><span>7 min read</span></div><h3><a href="articles/backtest-ea.html">Before You Trust an EA: A Backtesting Checklist</a></h3><p>A practical checklist for reviewing test settings, costs, and limitations.</p><a class="card-link" href="articles/backtest-ea.html">Read guide <span>→</span></a></article>
+    </div>
+  </section>
+  <section class="cta-band"><div class="wrap cta-inner"><div><p class="eyebrow">HAVE A PROJECT?</p><h2>Need help building or debugging an EA?</h2><p>Share the goal, current behaviour, and any compiler or tester logs. We'll review the scope before agreeing on the work.</p></div><a class="button button-primary" href="contact.html">Discuss your project <span>→</span></a></div></section>
+</main>
+<footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span>EA <b>Code Lab</b><small>BUILD. TEST. AUTOMATE.</small></span></a><p>Practical code. Clear thinking. Better-built trading tools.</p><div class="footer-links"><a href="tutorials.html">Tutorials</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div></div><div class="wrap footer-bottom"><span>© <span data-year></span> EA Code Lab</span><span>Educational content only. Trading involves risk.</span></div></footer>
+</body></html>
