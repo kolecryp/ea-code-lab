@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>MQL5 for Beginners: Understand the Building Blocks — EA Code Lab</title><meta name="description" content="An introduction to the structure of an MQL5 Expert Advisor and its main event functions."><link rel="stylesheet" href="../assets/style.css"><script defer src="../assets/main.js"></script></head><body><header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">&lt;/&gt;</span><span>EA <b>Code Lab</b><small>BUILD. TEST. AUTOMATE.</small></span></a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav"><a href="../index.html">Home</a><a class="active" href="../tutorials.html">Tutorials</a><a href="../services.html">Services</a><a href="../about.html">About</a><a class="nav-cta" href="../contact.html">Work with us</a></nav></header>
+<main class="wrap article-layout"><article class="prose article-prose"><a class="back-link" href="../tutorials.html">← All tutorials</a><div class="article-meta"><span class="tag">BEGINNER</span><span>8 min read</span></div><h1>MQL5 for Beginners: Understand the Building Blocks</h1><p class="article-lead">An Expert Advisor is a program that runs in MetaTrader 5. Before adding trading rules, understand the basic event-driven structure and how to test changes safely.</p><p><b>Important:</b> This is an introductory explanation, not a complete trading strategy. The examples below do not place orders.</p>
+<h2>1. The main event functions</h2><p>Many Expert Advisors use three event functions:</p><ul><li><code>OnInit()</code> runs when the EA is initialised. Use it to prepare resources and validate inputs.</li><li><code>OnDeinit()</code> runs when the EA is removed or shut down. Use it to release resources and clean up.</li><li><code>OnTick()</code> runs when a new price tick arrives for the chart symbol. It is commonly used to evaluate current conditions.</li></ul>
+<h2>2. A minimal example</h2><pre><code>#property strict
+
+int OnInit()
+{
+   Print("EA initialised");
+   return INIT_SUCCEEDED;
+}
+
+void OnDeinit(const int reason)
+{
+   Print("EA stopped. Reason: ", reason);
+}
+
+void OnTick()
+{
+   // Evaluate conditions here.
+   // This example deliberately does not place trades.
+}</code></pre>
+<p>This skeleton is useful for learning the lifecycle of an EA. It does not contain entry rules, position management, or risk controls.</p>
+<h2>3. Build in small steps</h2><ol><li>Create a new Expert Advisor in MetaEditor.</li><li>Add one small change at a time.</li><li>Compile and read the first meaningful error if compilation fails.</li><li>Use the Strategy Tester to inspect behaviour before considering live use.</li></ol>
+<h2>4. What to learn next</h2><p>After you understand the event functions, study input parameters, indicator handles, copying indicator buffers, symbol properties, order handling, and position/risk management. Learn each area independently before combining them.</p>
+<div class="notice"><b>Want help with a real MQL5 project?</b><p>We can discuss a clearly scoped development or debugging task.</p><a class="text-link" href="../contact.html">Contact EA Code Lab →</a></div><p class="disclaimer">Trading involves substantial risk. Educational examples are not financial advice and do not imply that a strategy is profitable.</p></article><aside class="article-sidebar"><div class="sidebar-card"><p class="eyebrow">IN THIS GUIDE</p><a href="#top">Event functions</a><a href="#top">Minimal example</a><a href="#top">Build in small steps</a><hr><b>Keep learning</b><p>Explore more practical MQL5 guides.</p><a class="text-link" href="../tutorials.html">Browse tutorials →</a></div></aside></main>
+<footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="../index.html"><span class="brand-mark">&lt;/&gt;</span><span>EA <b>Code Lab</b><small>BUILD. TEST. AUTOMATE.</small></span></a><p>Practical code. Clear thinking. Better-built trading tools.</p><div class="footer-links"><a href="../tutorials.html">Tutorials</a><a href="../services.html">Services</a><a href="../contact.html">Contact</a></div></div><div class="wrap footer-bottom"><span>© <span data-year></span> EA Code Lab</span><span>Educational content only. Trading involves risk.</span></div></footer></body></html>
